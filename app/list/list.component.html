@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="left-icon" *ngIf="!editMode"><img src="../../img/settings.png"></div>
+  <div class="left-icon" *ngIf="addMode && title.length < 1" (click)="toggle()"><img src="../../img/back.png"></div>
+  <div class="left-icon" *ngIf="addMode && title.length >= 1" (click)="cancel()">Cancel</div>
+  <div class="add" *ngIf="editMode && title == '' && !addMode" (click)="toggle()"><img src="../../img/add.png"></div>
+  <div class="title">Groceries</div>
+  <div class="edit" *ngIf="!editMode" (click)="toggleEditMode()"><img src="../../img/edit_icon.png"></div>
+  <div class="edit" *ngIf="editMode && !addMode" (click)="toggleEditMode()">Done</div>
+  <div class="edit" *ngIf="addMode && title.length >= 1" (click)="toggle()">Done</div>
+  <!--<div class="edit" *ngIf="addMode && title.length < 1" (click)="toggle()">Done</div>-->
+</div>
+<ul *ngIf="!addMode && !listMode">
+  <item *ngFor="let item of (list | cartFilter)" [item]="item" [editMode]="editMode" (delete)="delete($event)"></item>
+</ul>
+<ul *ngIf="listMode && !addMode">
+  <item *ngFor="let item of list" [item]="item" [editMode]="editMode" (delete)="delete($event)"></item>
+</ul>
+<!---->
+<div class="addNew" *ngIf="addMode">
+  <label for="inputTitle">Add new list item</label>
+  <input type="text" id="inputTitle" maxlength="27" [(ngModel)]="title" autofocus>
+  <span>Characters left {{27 - title.length}}</span>
+</div>
+<!---->
+<div class="footer">
+  <!---->
+  <div class="footer-list" (click)="toggleView()" *ngIf="!listMode"><img src="../../img/list_inactive.png"></div>
+  <div class="footer-cart" (click)="toggleView()" *ngIf="listMode"><img src="../../img/cart_inactive_footer.png"></div>
+  <!---->
+  <div class="footer-list" *ngIf="listMode"><img src="../../img/list_active.png"></div>
+  <div class="footer-cart" *ngIf="!listMode"><img src="../../img/cart_active_footer.png"></div>
+</div>

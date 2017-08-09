@@ -1,0 +1,143 @@
+@import "vars"
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'PFDinMedium', sans-serif
+    background-color: $BG
+    color: $color
+    app .app-wrapper
+        margin: auto
+        width: 640px
+        height: 1136px
+        background-color: $white
+        overflow: hidden
+        position: relative
+        .status-bar
+            height: 30px
+            width: 100%
+            background-color: $lightBG
+            position: relative
+            z-index: 5
+            .time
+                position: absolute
+                top: 0
+                text-align: center
+                width: 100%
+                line-height: 42px
+                font-size: 25px
+                letter-spacing: 1px
+        list .header
+            height: 98px
+            position: relative
+            border-bottom: 1px solid $borderB2
+            background-color: $lightBG
+            .title
+                margin: auto
+                font-size: 34px
+                text-align: center
+                line-height: 110px
+            .left-icon, .edit, .add
+                position: absolute
+                top: 36px
+                font-size: 32px
+                &:hover
+                    cursor: pointer
+            .left-icon
+                left: 32px
+            .edit
+                right: 32px
+            .add
+                left: 35px
+        list ul
+            width: 657px
+            position: absolute
+            top: 129px
+            right: -17px
+            height: 908px
+            list-style: none
+            overflow-y: scroll
+            overflow-x: hidden
+            li
+                width: 100%
+                height: 100px
+                background-color: $listBG
+                position: relative
+                border-bottom: 2px solid $borderD6
+                &:hover
+                    cursor: pointer
+                .cart
+                    img
+                        position: absolute
+                        left: 21px
+                        top: 31px
+                .home
+                    img
+                        position: absolute
+                        right: 27px
+                        top: 28px
+                .del
+                    img
+                        width: 64px
+                        position: absolute
+                        left: 23px
+                        top: 19px
+                        fill: $danger
+                .item
+                    width: 487px
+                    height: 100px
+                    background-color: $white
+                    border-left: 5px solid $borderD6
+                    border-right: 5px solid $borderD6
+                    position: absolute
+                    top: 0
+                    font-size: 40px
+                    line-height: 94px
+                    padding-left: 48px
+                    letter-spacing: 0
+                    transition: all 0.3s ease
+                .left
+                    left: -5px
+                .right
+                    left: 100px
+        .addNew
+            span
+                float: right
+                margin-right: 5%
+            label, input#inputTitle, span
+                font-size: 36px
+            label
+                text-align: center
+                display: block
+                width: 100%
+                margin-top: 42px
+            input#inputTitle
+                margin: 20% 5% 0 5%
+                width: 90%
+                height: 42px
+                border: none
+                border-bottom: 2px solid $font
+                font-family: $font-family
+                outline: none
+        .footer
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100px
+            background-color: $BGF9
+            border-top: 1px solid $borderB2
+            .footer-list
+                position: absolute
+                top: 30px
+                left: 115px
+                &:hover
+                    cursor: pointer
+            .footer-cart
+                position: absolute
+                top: 22px
+                right: 115px
+                &:hover
+                    cursor: pointer

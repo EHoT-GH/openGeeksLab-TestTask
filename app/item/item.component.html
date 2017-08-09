@@ -1,0 +1,9 @@
+<li>
+  <div class="cart" *ngIf="!editMode"><img src="../../img/cart_inactive.png"></div>
+  <div class="home" *ngIf="!editMode"><img src="../../img/home.png"></div>
+  <div class="del" *ngIf="editMode"><img src="../../img/delete.svg" (click)="onDelete(item)"></div>
+  <div class="item"
+       [ngClass]="(item.inStock && !editMode)?'left':'right'" (click)="toggle(item)">
+    {{item.title}}
+  </div>
+</li>

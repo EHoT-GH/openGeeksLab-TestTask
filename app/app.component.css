@@ -1,0 +1,25 @@
+body {
+  font-family: 'PFDinMedium', sans-serif;
+  background-color: #E6E7E8;
+  color: #2F2B2C; }
+body .app-wrapper {
+  margin: auto;
+  width: 640px;
+  height: 1136px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  position: relative; }
+body .app-wrapper .status-bar {
+  height: 30px;
+  width: 100%;
+  background-color: #F9F9F8;
+  position: relative;
+  z-index: 5; }
+body .app-wrapper .status-bar .time {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  line-height: 42px;
+  font-size: 25px;
+  letter-spacing: 1px; }
