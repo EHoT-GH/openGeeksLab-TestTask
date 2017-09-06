@@ -1,4 +1,4 @@
-# openGeeksLab-TestTask
+# openGeeksLab-plugin
 
 Инструкция развертывания проекта:
 1. Склонировать репозиторий <code>git clone https://github.com/EHoT-GH/openGeeksLab-TestTask.git</code>
